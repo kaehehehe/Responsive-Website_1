@@ -1,0 +1,181 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.container .box {
+  position: relative;
+  height: 100vh;
+}
+
+header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header .logo {
+  position: relative;
+  font-size: 1.4em;
+  color: #111;
+  font-weight: bold;
+}
+
+header ul {
+  display: flex;
+}
+
+header ul li {
+  list-style: none;
+  margin-left: 30px;
+}
+
+header ul li a {
+  color: #bdbdbb;
+  letter-spacing: 1px;
+}
+
+header ul li a:hover {
+  color: #333;
+}
+
+.left {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 60px;
+}
+
+.left h2 {
+  font-size: 4em;
+  color: #333;
+}
+
+.left p {
+  font-size: 1.1em;
+  color: #777;
+  line-height: 1.8em;
+}
+
+.btn {
+  display: inline-block;
+  font-size: 1.1em;
+  color: #333;
+  margin-top: 20px;
+  font-weight: bold;
+  border: 2px solid #333;
+  letter-spacing: 1px;
+  transition: 250ms;
+  padding: 10px 30px;
+}
+
+.btn:hover {
+  background-color: #333;
+  color: white;
+  letter-spacing: 2px;
+}
+
+.links {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  right: 60px;
+  bottom: 30px;
+}
+
+.links .links-title {
+  font-weight: bold;
+  color: #bdbdbb;
+  letter-spacing: 1px;
+}
+
+.links .links-icon {
+  margin-left: 20px;
+}
+
+.links .links-icon img {
+  max-width: 30px;
+}
+
+.right {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.right .imgBox {
+  position: relative;
+  width: 50%;
+  height: 50vh;
+}
+
+.right .imgBox:last-child {
+  width: 100%;
+}
+
+.right img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* responsive  */
+
+@media (max-width: 991px) {
+  .container {
+    grid-template-columns: 1fr;
+  }
+
+  header {
+    padding: 20px;
+  }
+
+  .left {
+    padding: 40px;
+  }
+
+  .container .left.box {
+    height: 70vh;
+  }
+
+  .container .right.box {
+    height: auto;
+  }
+
+  @media (max-width: 600px) {
+    .left h2 {
+      font-size: 3em;
+    }
+
+    .right .imgBox {
+      position: relative;
+      width: 100%;
+      height: 40vh;
+    }
+  }
+}
